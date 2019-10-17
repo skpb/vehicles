@@ -135,8 +135,8 @@ return [
             'rule-name' => 'custom-message',
         ],
         'g-recaptcha-response' => [
-            'required' => 'Por favor verifique que usted no es un robot',
-            'capcha' => 'Captcha error! intente nuevamente o contacte el administrador del sitio',
+            'required' => 'Por favor verifique que usted no es un robot.',
+            'capcha' => 'Captcha error! intente nuevamente o contacte el administrador del sitio.',
         ],
     ],
 
