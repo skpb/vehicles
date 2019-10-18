@@ -23,7 +23,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::all();
+        $vehicles = Vehicle::paginate();
 
         return view('vehicles.index', compact('vehicles'));
     }
@@ -61,8 +61,8 @@ class VehicleController extends Controller
 
     public function import(Request $request)
     {
-        $mount = $request->file('excel');
-        (new VehiclesImport)->import($mount);
+        $fileValidated = $request->file('excel');
+        (new VehiclesImport)->import($fileValidated);
         return redirect(route('vehicles.index'))->with('status', 'Archivo importado correctamente');
     }
 

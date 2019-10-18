@@ -21,6 +21,7 @@
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
+                    <th>#</th>
                     <th scope="col">Placa</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
@@ -34,18 +35,21 @@
             <tbody>
                 @foreach ($vehicles as $vehicle)
                     <tr>
-                    <th scope="row">{{ $vehicle->registration_number }}</th>
+                        <td>{{ $vehicles->firstItem() + $loop->index }}</td>
+                        <td>{{ $vehicle->registration_number }}</td>
                         <td>{{ $vehicle->brand }}</td>
                         <td>{{ $vehicle->model }}</td>
                         <td>{{ $vehicle->type }}</td>
-                        <th>{{ $vehicle->fuel_type }}</th>
+                        <td>{{ $vehicle->fuel_type }}</td>
                         <td>{{ $vehicle->doors }}</td>
                         <td>{{ $vehicle->year }}</td>
                         <td>{{ $vehicle->is_active }}</td>
                     </tr>
                 @endforeach
             </tbody>
-          </table>
+        </table>
     </div>
+    {{ $vehicles->links() }}
+    Mostrando resultados del {{ $vehicles->firstItem() }} al {{ $vehicles->lastItem() }} de un total de {{ $vehicles->total() }}
 </div>
 @endsection

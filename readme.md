@@ -72,3 +72,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Uses
+
+In this page i am testing several features of the Laravel framework tending to learn and can develop apps with important functions.
+
+Some features that i am testing here are:
+- Load files with [Laravel Excel](https://laravel-excel.com/).
+- Add reCaptcha provided by [Google reCaptcha](https://developers.google.com/recaptcha/).
+- Craete a *users system* with several functions like as:
+    - Recovery password
+    - Change password
+    - Translation in another language.
+
+### Developer
+
+**Luis Parrado**  *Thanks.*

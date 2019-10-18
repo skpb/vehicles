@@ -133,4 +133,18 @@ return [
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | I added these lines to avoid an error:
+    | stream_socket_enable_crypto(): SSL operation failed with code 1.
+    | OpenSSL Error messages: error: ...
+    |
+    */
+    'stream' => [
+        'ssl' => [
+           'allow_self_signed' => true,
+           'verify_peer' => false,
+           'verify_peer_name' => false,
+        ],
+     ],
 ];
