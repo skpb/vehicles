@@ -17,5 +17,6 @@ return [
     'sent' => '¡Recordatorio de contraseña enviado!',
     'token' => 'Este token de restablecimiento de contraseña es inválido.',
     'user' => 'No se ha encontrado un usuario con esa dirección de correo.',
+    'failed' => 'Esta contraseña no corresponde a la del usuario autenticado',
 
 ];

@@ -21,7 +21,7 @@
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
-                    <th>#</th>
+                    <th scope="col">#</th>
                     <th scope="col">Placa</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>

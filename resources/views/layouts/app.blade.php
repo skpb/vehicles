@@ -83,6 +83,6 @@
             .html(inputFile.files[0].name);
         });
     </script>
-    {{!! NoCaptcha::renderJs() !!}}
+    {!! NoCaptcha::renderJs() !!}
 </body>
 </html>

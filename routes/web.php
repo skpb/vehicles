@@ -17,6 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group([
+        'prefix' => 'password',
+        'namespace' => 'Auth',
+    ], function () {
+        Route::get('/change', 'ChangePasswordController@showChangePasswordForm')
+            ->name('password.change');
+        Route::put('/change', 'ChangePasswordController@update')
+            ->name('password.changed');
+    }
+);
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Vehicles
