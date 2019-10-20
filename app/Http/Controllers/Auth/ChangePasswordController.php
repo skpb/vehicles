@@ -32,7 +32,7 @@ class ChangePasswordController extends Controller
 
         $user->save();
 
-        return redirect('/home');
+        return redirect('/home')->with('status', trans('passwords.changed'));
     }
 
     protected function validatePasswordLogin(Request $request)

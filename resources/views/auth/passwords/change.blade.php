@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Cambiar contraseña') }}</div>
+                <div class="card-header">{{ __('Change password') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.changed') }}">
@@ -52,8 +52,11 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Cambiar contraseña') }}
+                                    {{ __('Change password') }}
                                 </button>
+                                <a href="{{ route('home') }}" class="btn btn-secondary">
+                                    {{ __('Cancel') }}
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -8,14 +8,6 @@
                 <div class="card-header">Panel administrativo - {{ config('app.name', 'Vehicles') }}.</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    ¡Has iniciado sesión!
-
                     <ul>
                         <li><a href="{{ route('vehicles.index') }}">Ver listado</a></li>
                         <li><a href="#">Ingresar nuevo</a></li>
@@ -30,6 +22,16 @@
                 <div class="card-header">Panel administrativo - Usuario.</div>
 
                 <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Cerrar</span>
+                            </button>
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
                     <ul>
                         <li><a href="{{ route('password.change') }}">Cambiar contraseña</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
